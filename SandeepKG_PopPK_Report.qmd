@@ -44,7 +44,7 @@ using Latexify
 using PrettyTables
 
 pwd()
-cd("/Users/sandeepkg/Desktop/SOPHAS/PopPK_Exercise/Assignments_2026") 
+cd(@__DIR__)
 df = CSV.read("pain_relief.csv", DataFrame)
 df.logconc = ifelse.(ismissing.(df.Conc) .| (df.Conc .<= 0), missing, log.(df.Conc))
 Cmax = combine(groupby(df, :Subject), :Conc => (x -> maximum(skipmissing(x))) => :Cmax)
