@@ -1415,9 +1415,3 @@ model_representation_full = Latexify.LaTeXString(
 );
 model_representation_full
 ```
-
-## Additional diagnostic plots
-
-```{julia}
-
-```
